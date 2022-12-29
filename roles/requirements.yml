@@ -1,4 +1,4 @@
 - src: https://github.com/adrimus/chocolatey.git
   scm: git
-  version: "v1.0"
+  version: "v2.0"
   name: chocolatey
