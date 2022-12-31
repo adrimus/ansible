@@ -2,3 +2,7 @@
   scm: git
   version: "v2.0"
   name: chocolatey
+
+- src: geerlingguy.docker
+
+- src: geerlingguy.pip

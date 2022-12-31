@@ -1,10 +1,20 @@
+- hosts: linux
+  vars:
+    pip_install_packages:
+      - name: docker
+
+  roles:
+    - geerlingguy.pip
+    - geerlingguy.docker
+  become: true
+
 - name: '[Linux] configure nginx'
   import_playbook: configure_nginx_web_server.yml
 
 - hosts: windows
   gather_facts: false
   roles:
-    - chocolatey  
+    - chocolatey
 
 - name: '[Windows] configure IIS'
   import_playbook: configure_iis_web_server.yml
