@@ -38,4 +38,3 @@
   handlers:
     - name: restart IIS
       win_shell: '& {iisreset}'
-      

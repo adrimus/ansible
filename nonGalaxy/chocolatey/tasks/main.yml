@@ -9,10 +9,10 @@
   register: programData_out
   changed_when: false
 
-- set_fact:
+- ansible.builtin.set_fact:
     choco_location: "{{ programData_out.stdout | trim + '\\chocolatey' }}"
 
-- set_fact:
+- ansible.builtin.set_fact:
     temp_location: "{{ temp_out.stdout | trim }}"
 
 - name: copy ChocolateyInstall.ps1
