@@ -5,6 +5,8 @@ filters:
   tag:app: ansible
 hostnames:
   - tag:Name
+compose:
+  ansible_host: public_dns_name
 keyed_groups:
   - key: tags.os
     separator: ""
