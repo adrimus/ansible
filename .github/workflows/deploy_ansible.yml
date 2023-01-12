@@ -1,3 +1,5 @@
+
+
 name: deploy ansible
 
 on:
@@ -9,7 +11,19 @@ on:
     - main
 
 jobs:
+  build:
+      runs-on: ubuntu-latest     
+      steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      
+      - name: Lint Ansible Playbooks
+        uses: ansible/ansible-lint-action@main
+        with:
+          targets: ""
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
